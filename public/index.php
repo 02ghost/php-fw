@@ -13,11 +13,6 @@ use Metinet\Core\Config\JsonFileLoader;
 use Metinet\Core\Config\ChainLoader;
 use Metinet\Core\Controller\ControllerResolver;
 use Metinet\Core\Config\Configuration;
-use Metinet\Domain\Conference;
-use Metinet\Domain\DateConference;
-use Metinet\Domain\Lieu;
-use Metinet\Domain\Student;
-
 
 $request = Request::createFromGlobals();
 
@@ -42,12 +37,3 @@ try {
 }
 
 $response->send();
-
-$conference = new Conference(
-    new Student('Matt', 'Ghost', '02/05/1997', 2015),
-    'test',
-    'un truc de fou', ['test'],
-    new Lieu('Salle 107', 'Rue Peter Fink', '01000', 'Bourg en Bresse', 'France', 25),
-    10,
-    new DateConference('06/02/2018', 15, 17),
-    'true');
